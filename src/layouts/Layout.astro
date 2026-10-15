@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css';
+
 interface Props {
   title: string;
   description?: string;
@@ -41,7 +43,7 @@ const { title, description = "现代化导航与独立技术博客" } = Astro.pr
             <span>📝</span> 精选博客
           </a>
           <a
-            href="/keystatic"
+            href="/cms/"
             class="px-3 py-1.5 rounded-lg bg-emerald-600/20 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-600 hover:text-white transition flex items-center gap-1 shadow-sm shadow-emerald-500/10"
           >
             <span>⚙️</span> 后台管理

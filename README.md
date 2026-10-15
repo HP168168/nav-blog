@@ -5,7 +5,7 @@
 ## 目录结构
 
 ```
-d:/tools/nav-blog/
+nav-blog/
 ├── src/
 │   ├── content/
 │   │   ├── posts/          # 博客文章 (Markdown / Markdoc)
@@ -36,7 +36,7 @@ d:/tools/nav-blog/
 3. **浏览器访问**：
    - 前台网址导航首页：`http://localhost:4321/`
    - 精选技术博客页：`http://localhost:4321/blog`
-   - **在线可视化管理后台**：`http://localhost:4321/keystatic`
+   - **在线可视化管理后台**：`http://localhost:4321/cms`
 
 ## 线上零成本部署指南
 

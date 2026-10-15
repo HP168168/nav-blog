@@ -2,7 +2,15 @@ import { config, fields, collection } from '@keystatic/core';
 
 export default config({
   storage: {
-    kind: 'local',
+    kind: 'local', //local：本地；github：线上发布
+
+    /*
+    //线上发布用
+    repo: {
+      owner: 'HP168168',//你的github用户名
+      name: 'nav-blog', //你的github仓库名
+    },
+    */
   },
   collections: {
     // 1. 博客文章模块

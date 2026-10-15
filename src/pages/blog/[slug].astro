@@ -49,7 +49,7 @@ const { Content } = await render(post);
       <a href="/blog" class="text-slate-400 hover:text-white transition">
         ← 返回博客列表
       </a>
-      <a href="/keystatic" class="text-emerald-400 hover:underline text-xs">
+      <a href={`/cms/collection/posts/item/${post.id}`} class="text-emerald-400 hover:underline text-xs">
         在后台编辑本文 ↗
       </a>
     </div>
