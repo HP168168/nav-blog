@@ -1,0 +1,57 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<Layout title={`${post.data.title} · NaviBlog`}>
+  <article class="max-w-3xl mx-auto py-6">
+    <div class="mb-8 pb-6 border-b border-slate-800">
+      <a href="/blog" class="text-xs text-emerald-400 hover:underline inline-flex items-center gap-1 mb-4">
+        ← 返回博客列表
+      </a>
+      <div class="flex items-center gap-3 text-xs text-slate-500 mb-3">
+        {post.data.category && (
+          <span class="px-2.5 py-0.5 rounded bg-emerald-500/10 text-emerald-400 font-medium">
+            {post.data.category}
+          </span>
+        )}
+        {post.data.publishedDate && (
+          <time>{new Date(post.data.publishedDate).toLocaleDateString('zh-CN')}</time>
+        )}
+      </div>
+      <h1 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
+        {post.data.title}
+      </h1>
+      {post.data.summary && (
+        <p class="mt-4 text-slate-400 text-base leading-relaxed border-l-2 border-emerald-500/50 pl-4 py-1 italic bg-slate-900/40 rounded-r">
+          {post.data.summary}
+        </p>
+      )}
+    </div>
+
+    <!-- 文章正文 -->
+    <div class="prose prose-invert prose-emerald max-w-none text-slate-300 leading-relaxed space-y-4">
+      <Content />
+    </div>
+
+    <div class="mt-12 pt-6 border-t border-slate-800 flex justify-between items-center text-sm">
+      <a href="/blog" class="text-slate-400 hover:text-white transition">
+        ← 返回博客列表
+      </a>
+      <a href="/keystatic" class="text-emerald-400 hover:underline text-xs">
+        在后台编辑本文 ↗
+      </a>
+    </div>
+  </article>
+</Layout>

@@ -1,0 +1,28 @@
+{
+  "name": "ai-tools",
+  "icon": "🤖",
+  "order": 1,
+  "links": [
+    {
+      "title": "DeepSeek",
+      "url": "https://chat.deepseek.com",
+      "description": "国产开源领军大模型，推理能力极强。",
+      "icon": "🧠",
+      "tag": "强烈推荐"
+    },
+    {
+      "title": "Claude",
+      "url": "https://claude.ai",
+      "description": "Anthropic 旗舰模型，长文本与代码能力顶尖。",
+      "icon": "🎭",
+      "tag": "编程首选"
+    },
+    {
+      "title": "OpenRouter",
+      "url": "https://openrouter.ai",
+      "description": "汇聚全球模型的 API 聚合分发路由站。",
+      "icon": "🔀",
+      "tag": "免费额度"
+    }
+  ]
+}
