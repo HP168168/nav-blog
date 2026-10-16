@@ -40,6 +40,8 @@ if (fs.existsSync(coreDistDir)) {
         ['replace(/^\\/keystatic\\/?/, "")', 'replace(/^\\/cms\\/?/, "")'],
         ['new URL("/keystatic", deployedURL)', 'new URL("/cms", deployedURL)'],
         ['`${window.location.origin}/keystatic`', '`${window.location.origin}/cms`'],
+        ['children: "Regenerate"', 'children: "重新生成"'],
+        ['"aria-label": "regenerate"', '"aria-label": "重新生成"'],
       ]);
     }
   }

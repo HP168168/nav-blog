@@ -20,9 +20,19 @@ export default config({
       path: 'src/content/posts/*',
       format: { contentField: 'content' },
       schema: {
-        title: fields.slug({ name: { label: '文章标题' } }),
+        title: fields.slug({
+          name: { label: '文章标题' },
+          slug: {
+            label: '文章链接别名 (Slug)',
+            description: '文章的英文访问路径与文件名，支持英文、数字与短横线（点击右侧“重新生成”可根据标题自动转换）',
+          },
+        }),
         summary: fields.text({ label: '文章摘要', multiline: true }),
-        publishedDate: fields.date({ label: '发布日期', defaultValue: { kind: 'today' } }),
+        publishedDate: fields.date({
+          label: '发布日期',
+          defaultValue: { kind: 'today' },
+          description: '新建文章时默认自动填充当天系统日期，也可手动调整',
+        }),
         category: fields.text({ label: '文章分类', defaultValue: '技术分享' }),
         content: fields.markdoc({ label: '文章正文', extension: 'md' }),
       },
@@ -35,7 +45,13 @@ export default config({
       path: 'src/content/navigation/*',
       format: 'json',
       schema: {
-        name: fields.slug({ name: { label: '分类名称 (如 AI工具、前端资源)' } }),
+        name: fields.slug({
+          name: { label: '分类名称 (如 AI工具、前端资源)' },
+          slug: {
+            label: '分类链接别名 (Slug)',
+            description: '分类的唯一英文标识与文件名（点击右侧“重新生成”可根据分类名自动转换）',
+          },
+        }),
         icon: fields.text({ label: '分类图标 (Emoji 或 图标名)', defaultValue: '🚀' }),
         order: fields.integer({ label: '排序 (越小越靠前)', defaultValue: 1 }),
         links: fields.array(
