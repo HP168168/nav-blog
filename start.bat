@@ -21,6 +21,8 @@ if not exist "node_modules" (
     )
 )
 
+call node scripts/patch-cms.js >nul 2>&1
+
 start "" "http://localhost:4321"
 call npm run dev
 
