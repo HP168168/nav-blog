@@ -11,11 +11,11 @@
     "postinstall": "node scripts/patch-cms.js"
   },
   "dependencies": {
-    "@astrojs/node": "^11.1.7",
-    "@astrojs/react": "^7.0.1",
+    "@astrojs/node": "^11.1.8",
+    "@astrojs/react": "^7.1.0",
     "@keystatic/astro": "^6.0.0",
     "@keystatic/core": "^0.5.38",
-    "astro": "^7.3.8",
+    "astro": "^7.4.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "tailwindcss": "^3.4.17"
