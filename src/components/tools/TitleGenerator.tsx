@@ -31,16 +31,6 @@ const COLUMNS: ColumnConfig[] = [
     btnHover: 'hover:bg-amber-500/20',
   },
   {
-    key: 'keyword',
-    label: '关键词',
-    tag: '[关键词]',
-    headerBg: 'bg-emerald-500/15',
-    headerBorder: 'border-emerald-500/30',
-    headerText: 'text-emerald-400',
-    btnBg: 'bg-emerald-600/80 hover:bg-emerald-600 text-emerald-50',
-    btnHover: 'hover:bg-emerald-500/20',
-  },
-  {
     key: 'brand',
     label: '品牌',
     tag: '[品牌]',
@@ -49,6 +39,16 @@ const COLUMNS: ColumnConfig[] = [
     headerText: 'text-sky-400',
     btnBg: 'bg-sky-600/80 hover:bg-sky-600 text-sky-50',
     btnHover: 'hover:bg-sky-500/20',
+  },
+  {
+    key: 'keyword',
+    label: '关键词',
+    tag: '[关键词]',
+    headerBg: 'bg-emerald-500/15',
+    headerBorder: 'border-emerald-500/30',
+    headerText: 'text-emerald-400',
+    btnBg: 'bg-emerald-600/80 hover:bg-emerald-600 text-emerald-50',
+    btnHover: 'hover:bg-emerald-500/20',
   },
   {
     key: 'business',
