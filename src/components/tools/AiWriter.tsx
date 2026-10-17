@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, useCallback } from 'react';
+import { useState, useEffect, useMemo, useRef } from 'react';
 
 const INDUSTRIES = ['机械设备', '五金建材', '电子电工', '商务服务', '化工环保', '招商加盟', '数码家电', '农林牧渔'];
 
@@ -9,74 +9,90 @@ const ARTICLE_TYPES = [
   { id: 'faq', name: '常见问题解答与百科', desc: '针对搜索问答精准解答，利于搜索与AI抓取' },
 ];
 
-function generateLocalArticle(opts: {
+function generateHtmlArticle(opts: {
   title: string;
   keyword: string;
   industry: string;
-  type: string;
-  lengthTier: string;
   includeTable: boolean;
   includeFaq: boolean;
   includeContact: boolean;
 }) {
-  const { title, keyword, industry, type, includeTable, includeFaq, includeContact } = opts;
+  const { title, keyword, industry, includeTable, includeFaq, includeContact } = opts;
   const kw = keyword || title.slice(0, 10);
   const now = new Date().toISOString().slice(0, 10);
 
-  const intro = `在当今注重品质与效率的工业与商业制造领域，【${kw}】作为${industry}行业中的关键环节，直接关系到客户的生产效率与产品交付质量。近期很多采购商和企业客户都在关注“${title}”的相关信息。本文将围绕产品技术参数、核心性能优势、厂家实力保障及采购常见问题，为您进行全方位剖析。`;
-
-  const specTable = includeTable ? `
-## 核心规格与技术参数表
-
-| 指标项目 | 标准配置 / 技术参数 | 行业参考标准 | 备注说明 |
-| :--- | :--- | :--- | :--- |
-| **设备/产品类别** | ${industry}专用级 ${kw} | ISO9001 / CE 认证 | 支持非标定制 |
-| **工作效率/功率** | 工业级高效稳定输出 | 优于行业同类 15% | 低耗耐用设计 |
-| **核心材质/零部件** | 加厚合金钢 / 进口控制元器件 | 国标优质用料 | 延长使用寿命 |
-| **适配场景** | 车间流水线、中大型工矿及商业场所 | 多工况稳定适应 | 宽温高湿无忧 |
-| **供货周期** | 常规型号现货速发 / 定制款 3-7 天 | 极速响应 | 厂家直发直达 |
+  const tableHtml = includeTable ? `
+<h2>核心规格与技术参数表</h2>
+<table style="width:100%; border-collapse: collapse; margin: 16px 0; border: 1px solid #334155;">
+  <thead>
+    <tr style="background: rgba(30, 41, 59, 0.8);">
+      <th style="border: 1px solid #334155; padding: 10px 14px; text-align: left; font-weight: 600;">指标项目</th>
+      <th style="border: 1px solid #334155; padding: 10px 14px; text-align: left; font-weight: 600;">标准配置 / 技术参数</th>
+      <th style="border: 1px solid #334155; padding: 10px 14px; text-align: left; font-weight: 600;">行业参考标准</th>
+      <th style="border: 1px solid #334155; padding: 10px 14px; text-align: left; font-weight: 600;">备注说明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #334155; padding: 10px 14px;"><strong>设备/产品类别</strong></td>
+      <td style="border: 1px solid #334155; padding: 10px 14px;">${industry}专用级 ${kw}</td>
+      <td style="border: 1px solid #334155; padding: 10px 14px;">ISO9001 / CE 认证</td>
+      <td style="border: 1px solid #334155; padding: 10px 14px;">支持非标定制</td>
+    </tr>
+    <tr style="background: rgba(15, 23, 42, 0.4);">
+      <td style="border: 1px solid #334155; padding: 10px 14px;"><strong>工作效率/功率</strong></td>
+      <td style="border: 1px solid #334155; padding: 10px 14px;">工业级高效稳定输出</td>
+      <td style="border: 1px solid #334155; padding: 10px 14px;">优于行业同类 15%</td>
+      <td style="border: 1px solid #334155; padding: 10px 14px;">低耗耐用设计</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #334155; padding: 10px 14px;"><strong>核心材质/零部件</strong></td>
+      <td style="border: 1px solid #334155; padding: 10px 14px;">加厚合金钢 / 进口控制元器件</td>
+      <td style="border: 1px solid #334155; padding: 10px 14px;">国标优质用料</td>
+      <td style="border: 1px solid #334155; padding: 10px 14px;">延长使用寿命</td>
+    </tr>
+    <tr style="background: rgba(15, 23, 42, 0.4);">
+      <td style="border: 1px solid #334155; padding: 10px 14px;"><strong>供货周期</strong></td>
+      <td style="border: 1px solid #334155; padding: 10px 14px;">常规型号现货速发 / 定制款 3-7 天</td>
+      <td style="border: 1px solid #334155; padding: 10px 14px;">极速响应</td>
+      <td style="border: 1px solid #334155; padding: 10px 14px;">厂家直发直达</td>
+    </tr>
+  </tbody>
+</table>
 ` : '';
 
-  const bodySection = `
-## 为什么选择源头实力的【${kw}】？
-
-1. **精工选材与严格质检**：从原材料入库到成品出厂，每台【${kw}】均经过多道严密工序检测，杜绝虚标参数，确保运行平稳可靠。
-2. **高性价比与一手价格**：省去中间商代理层层加价环节，源头工厂直接面向终端客户与工程项目采购，大幅缩减企业采购预算。
-3. **支持非标定制设计**：拥有经验丰富的设计与研发技术团队，可根据您的实际工况要求量身设计专属方案，满足各类特殊作业需求。
-`;
-
-  const faqSection = includeFaq ? `
-## 采购常见问题解答 (FAQ)
-
-**Q1：如何根据实际需求选购合适的【${kw}】？**  
-A：建议首先明确日常生产负荷、工作场地尺寸以及特定材质工艺要求。我司技术人员可提供免费选型计算与方案匹配服务。
-
-**Q2：从下单到发货需要多长时间？**  
-A：标准现货型号当天或次日即可发货；对于特殊规格或定制化订单，一般在确定图纸方案后 3-7 个工作日内完成交付。
-
-**Q3：产品质保与售后服务如何保障？**  
-A：所有出厂产品提供全面质量质保，核心部件提供长期技术支持与快速备件更换服务，售后技术人员全天候在线协助。
+  const faqHtml = includeFaq ? `
+<h2>采购常见问题解答 (FAQ)</h2>
+<p><strong>Q1：如何根据实际需求选购合适的【${kw}】？</strong><br/>
+A：建议首先明确日常生产负荷、工作场地尺寸以及特定材质工艺要求。我司技术人员可提供免费选型计算与方案匹配服务。</p>
+<p><strong>Q2：从下单到发货需要多长时间？</strong><br/>
+A：标准现货型号当天或次日即可发货；对于特殊规格或定制化订单，一般在确定图纸方案后 3-7 个工作日内完成交付。</p>
+<p><strong>Q3：产品质保与售后服务如何保障？</strong><br/>
+A：所有出厂产品提供全面质量质保，核心部件提供长期技术支持与快速备件更换服务，售后技术人员全天候在线协助。</p>
 ` : '';
 
-  const contactSection = includeContact ? `
----
-
-### 📞 厂家直销 · 咨询与报价通道
-如果您对【**${title}**】有采购意向、工程招标需求或需要获取最新产品画册与出厂批发底价，欢迎随时与我们销售工程师取得联系。  
-* 服务支持：提供一对一免费选型建议与技术方案交流  
-* 订购优势：全国物流直达配送，支持开具增值税专用发票
+  const contactHtml = includeContact ? `
+<hr style="border-color: #334155; margin: 24px 0;" />
+<h3>📞 厂家直销 · 咨询与报价通道</h3>
+<p>如果您对【<strong>${title}</strong>】有采购意向、工程招标需求或需要获取最新产品画册与出厂批发底价，欢迎随时与我们销售工程师取得联系。</p>
+<ul>
+  <li>服务支持：提供一对一免费选型建议与技术方案交流</li>
+  <li>订购优势：全国物流直达配送，支持开具增值税专用发票</li>
+</ul>
 ` : '';
 
-  return `# ${title}
-
-*发布时间：${now} | 所属行业：${industry} | 核心关键词：${kw}*
-
-${intro}
-
-${bodySection}
-${specTable}
-${faqSection}
-${contactSection}
+  return `<h1>${title}</h1>
+<p style="color: #94a3b8; font-size: 13px;"><em>发布时间：${now} | 所属行业：${industry} | 核心关键词：${kw}</em></p>
+<p>在当今注重品质与效率的工业与商业制造领域，【<strong>${kw}</strong>】作为${industry}行业中的关键环节，直接关系到客户的生产效率与产品交付质量。近期很多采购商和企业客户都在关注“${title}”的相关信息。本文将围绕产品技术参数、核心性能优势、厂家实力保障及采购常见问题，为您进行全方位剖析。</p>
+<h2>为什么选择源头实力的【${kw}】？</h2>
+<ol>
+  <li><strong>精工选材与严格质检</strong>：从原材料入库到成品出厂，每台【${kw}】均经过多道严密工序检测，杜绝虚标参数，确保运行平稳可靠。</li>
+  <li><strong>高性价比与一手价格</strong>：省去中间商代理层层加价环节，源头工厂直接面向终端客户与工程项目采购，大幅缩减企业采购预算。</li>
+  <li><strong>支持非标定制设计</strong>：拥有经验丰富的设计与研发技术团队，可根据您的实际工况要求量身设计专属方案，满足各类特殊作业需求。</li>
+</ol>
+${tableHtml}
+${faqHtml}
+${contactHtml}
 `;
 }
 
@@ -96,10 +112,12 @@ export default function AiWriter() {
   const [apiKey, setApiKey] = useState('');
   const [modelName, setModelName] = useState('gpt-3.5-turbo');
 
-  // 生成状态
+  // 生成状态与编辑器
   const [isGenerating, setIsGenerating] = useState(false);
-  const [articleContent, setArticleContent] = useState('');
   const [copied, setCopied] = useState(false);
+  const [selectedBlock, setSelectedBlock] = useState('p');
+  const [editorText, setEditorText] = useState('');
+  const editorRef = useRef<HTMLDivElement>(null);
 
   // 初始化从 localStorage 读取由标题生成器传来的标题
   useEffect(() => {
@@ -114,6 +132,71 @@ export default function AiWriter() {
     }
   }, []);
 
+  // 富文本执行命令工具
+  const execCmd = (cmd: string, val: string | undefined = undefined) => {
+    document.execCommand(cmd, false, val);
+    handleEditorInput();
+  };
+
+  const handleBlockChange = (val: string) => {
+    setSelectedBlock(val);
+    if (val === 'p') {
+      execCmd('formatBlock', '<p>');
+    } else if (val === 'h1') {
+      execCmd('formatBlock', '<h1>');
+    } else if (val === 'h2') {
+      execCmd('formatBlock', '<h2>');
+    } else if (val === 'h3') {
+      execCmd('formatBlock', '<h3>');
+    } else if (val === 'blockquote') {
+      execCmd('formatBlock', '<blockquote>');
+    } else if (val === 'pre') {
+      execCmd('formatBlock', '<pre>');
+    }
+  };
+
+  const insertLink = () => {
+    const url = prompt('请输入链接地址 (URL):', 'https://');
+    if (url) {
+      execCmd('createLink', url);
+    }
+  };
+
+  const insertImage = () => {
+    const url = prompt('请输入图片地址 (Image URL):', 'https://');
+    if (url) {
+      execCmd('insertImage', url);
+    }
+  };
+
+  const insertTable = () => {
+    const tableHtml = `
+<table style="width:100%; border-collapse: collapse; margin: 12px 0; border: 1px solid #475569;">
+  <thead>
+    <tr style="background: rgba(51, 65, 85, 0.6);">
+      <th style="border: 1px solid #475569; padding: 8px;">表头 1</th>
+      <th style="border: 1px solid #475569; padding: 8px;">表头 2</th>
+      <th style="border: 1px solid #475569; padding: 8px;">表头 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #475569; padding: 8px;">单元格数据</td>
+      <td style="border: 1px solid #475569; padding: 8px;">单元格数据</td>
+      <td style="border: 1px solid #475569; padding: 8px;">单元格数据</td>
+    </tr>
+  </tbody>
+</table><p><br/></p>
+`;
+    execCmd('insertHTML', tableHtml);
+  };
+
+  const handleEditorInput = () => {
+    if (editorRef.current) {
+      setEditorText(editorRef.current.innerText || '');
+    }
+  };
+
   // 生成文章
   const handleGenerate = async () => {
     if (!title.trim()) {
@@ -123,33 +206,31 @@ export default function AiWriter() {
     setIsGenerating(true);
 
     if (!useCustomAi || !apiKey) {
-      // 本地高质量模板引擎
       setTimeout(() => {
-        const generated = generateLocalArticle({
+        const html = generateHtmlArticle({
           title,
           keyword,
           industry,
-          type: articleType,
-          lengthTier,
           includeTable,
           includeFaq,
           includeContact,
         });
-        setArticleContent(generated);
+        if (editorRef.current) {
+          editorRef.current.innerHTML = html;
+          setEditorText(editorRef.current.innerText || '');
+        }
         setIsGenerating(false);
       }, 500);
       return;
     }
 
-    // 调用自定义 API
     try {
-      const prompt = `你是一位精通 B2B 工业品营销与 SEO 的资深文案专家。请围绕标题《${title}》写一篇专业的企业宣传/软文。
+      const prompt = `你是一位精通 B2B 工业品营销与 SEO 的资深文案专家。请围绕标题《${title}》写一篇专业的企业宣传文章。
 要求：
 - 核心关键词：${keyword}（请在文章自然融入，保持合理密度）
 - 所属行业：${industry}
 - 文章体裁：${ARTICLE_TYPES.find(t => t.id === articleType)?.name}
-- 模块要求：${includeTable ? '包含规格参数Markdown表格；' : ''}${includeFaq ? '包含常见问答FAQ；' : ''}${includeContact ? '包含文末采购咨询引导；' : ''}
-- 输出格式：标准 Markdown 格式，具备规范的 H1、H2 标题层级。`;
+- 格式要求：直接输出 HTML 结构标签（如 <h1>, <h2>, <p>, <table>, <ul>, <li> 等），无需任何 markdown 标记。`;
 
       const res = await fetch(apiEndpoint, {
         method: 'POST',
@@ -160,19 +241,22 @@ export default function AiWriter() {
         body: JSON.stringify({
           model: modelName,
           messages: [
-            { role: 'system', content: '你是一位工业品与B2B营销SEO文案专家。' },
+            { role: 'system', content: '你是一位工业品与B2B营销SEO文案专家。直接返回干净的 HTML 片段。' },
             { role: 'user', content: prompt }
           ],
           temperature: 0.7,
         })
       });
 
-      if (!res.ok) {
-        throw new Error(`API 响应错误: ${res.statusText}`);
-      }
+      if (!res.ok) throw new Error(`API 响应错误: ${res.statusText}`);
       const data = await res.json();
-      const content = data.choices?.[0]?.message?.content || '';
-      setArticleContent(content);
+      let content = data.choices?.[0]?.message?.content || '';
+      content = content.replace(/```html/g, '').replace(/```/g, '').trim();
+
+      if (editorRef.current) {
+        editorRef.current.innerHTML = content;
+        setEditorText(editorRef.current.innerText || '');
+      }
     } catch (err: any) {
       alert(`AI 接口调用失败: ${err.message || '请检查网络或 API Key'}`);
     } finally {
@@ -182,38 +266,67 @@ export default function AiWriter() {
 
   // SEO 指标统计
   const seoStats = useMemo(() => {
-    const textOnly = articleContent.replace(/[#*`|\-\n\s]/g, '');
-    const charCount = textOnly.length;
+    const raw = editorText.replace(/\s+/g, '');
+    const charCount = raw.length;
     let kwCount = 0;
-    if (keyword && textOnly) {
+    if (keyword && raw) {
       const reg = new RegExp(keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g');
-      const matches = textOnly.match(reg);
+      const matches = raw.match(reg);
       kwCount = matches ? matches.length : 0;
     }
     const kwDensity = charCount > 0 ? ((kwCount * keyword.length) / charCount * 100).toFixed(1) : '0';
+    const html = editorRef.current?.innerHTML || '';
     return {
       charCount,
       kwCount,
       kwDensity,
-      hasTable: articleContent.includes('|'),
-      hasH2: articleContent.includes('##'),
+      hasTable: html.includes('<table'),
+      hasH2: html.includes('<h2') || html.includes('<h1'),
     };
-  }, [articleContent, keyword]);
+  }, [editorText, keyword]);
 
-  const copyText = (mode: 'plain' | 'md') => {
-    const text = mode === 'plain'
-      ? articleContent.replace(/[#*`_~]/g, '')
-      : articleContent;
-    navigator.clipboard.writeText(text);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+  const copyPlain = () => {
+    if (editorRef.current) {
+      navigator.clipboard.writeText(editorRef.current.innerText);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    }
   };
 
-  const exportMarkdown = () => {
-    const blob = new Blob([articleContent], { type: 'text/markdown;charset=utf-8' });
+  const copyRich = () => {
+    if (editorRef.current) {
+      const html = editorRef.current.innerHTML;
+      const blobHtml = new Blob([html], { type: 'text/html' });
+      const blobText = new Blob([editorRef.current.innerText], { type: 'text/plain' });
+      // 写入富文本剪贴板
+      if (typeof ClipboardItem !== 'undefined') {
+        navigator.clipboard.write([
+          new ClipboardItem({
+            'text/html': blobHtml,
+            'text/plain': blobText,
+          })
+        ]).then(() => {
+          setCopied(true);
+          setTimeout(() => setCopied(false), 2000);
+        }).catch(() => {
+          navigator.clipboard.writeText(html);
+          setCopied(true);
+          setTimeout(() => setCopied(false), 2000);
+        });
+      } else {
+        navigator.clipboard.writeText(html);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      }
+    }
+  };
+
+  const exportHtml = () => {
+    if (!editorRef.current) return;
+    const blob = new Blob([editorRef.current.innerHTML], { type: 'text/html;charset=utf-8' });
     const a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
-    a.download = `${title.replace(/[\/\\:*?"<>|]/g, '_') || 'seo-article'}.md`;
+    a.download = `${title.replace(/[\/\\:*?"<>|]/g, '_') || 'article'}.html`;
     a.click();
   };
 
@@ -313,7 +426,7 @@ export default function AiWriter() {
             </div>
           </div>
 
-          {/* AI 引擎高级配置折叠卡 */}
+          {/* AI 引擎高级配置 */}
           <div className="rounded-xl bg-slate-900/60 border border-slate-800 p-4 space-y-3">
             <div className="flex items-center justify-between">
               <span className="text-xs font-semibold text-slate-300 flex items-center gap-1.5">
@@ -387,7 +500,7 @@ export default function AiWriter() {
           </button>
         </div>
 
-        {/* 右侧：工作台与文章预览 (占 7 列) */}
+        {/* 右侧：工作台与富文本编辑器 (占 7 列) */}
         <div className="lg:col-span-7 space-y-4 flex flex-col">
           {/* SEO 实时质量看板 */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
@@ -412,43 +525,191 @@ export default function AiWriter() {
             </div>
           </div>
 
-          {/* 文章编辑与预览区 */}
-          <div className="rounded-xl bg-slate-900/60 border border-slate-800 flex-1 flex flex-col min-h-[500px] overflow-hidden">
-            <div className="px-4 py-2.5 bg-slate-900/80 border-b border-slate-800 flex items-center justify-between flex-wrap gap-2">
-              <span className="text-xs font-semibold text-slate-400">📄 Markdown 编辑与预览</span>
+          {/* 富文本编辑器核心结构 (参考图片1) */}
+          <div className="flex flex-col flex-1 space-y-2">
+            <div className="flex items-center justify-between">
+              <label className="text-sm font-semibold text-slate-200">文章正文</label>
               <div className="flex items-center gap-1.5">
                 <button
-                  onClick={() => copyText('plain')}
-                  className="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs transition"
-                  title="去除Markdown符号的纯文本"
+                  type="button"
+                  onClick={copyPlain}
+                  className="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs transition cursor-pointer"
+                  title="复制纯文本"
                 >
                   复制纯文本
                 </button>
                 <button
-                  onClick={() => copyText('md')}
-                  className={`px-2.5 py-1 rounded border text-xs transition ${
+                  type="button"
+                  onClick={copyRich}
+                  className={`px-2.5 py-1 rounded border text-xs font-medium transition cursor-pointer ${
                     copied
                       ? 'bg-emerald-500/20 border-emerald-500/40 text-emerald-400'
                       : 'bg-slate-800 border-slate-700 text-slate-300 hover:border-emerald-500/40 hover:text-emerald-400'
                   }`}
+                  title="可直接带格式粘贴进微信公众号/博客/Word"
                 >
-                  {copied ? '✅ 已复制' : '📋 复制 Markdown'}
+                  {copied ? '✅ 已复制' : '📋 复制富文本'}
                 </button>
                 <button
-                  onClick={exportMarkdown}
-                  className="px-2.5 py-1 rounded bg-slate-800 border border-slate-700 hover:border-cyan-500/40 text-slate-300 hover:text-cyan-400 text-xs transition"
+                  type="button"
+                  onClick={exportHtml}
+                  className="px-2.5 py-1 rounded bg-slate-800 border border-slate-700 hover:border-cyan-500/40 text-slate-300 hover:text-cyan-400 text-xs transition cursor-pointer"
                 >
-                  ⬇ 导出 .md
+                  ⬇ 导出 HTML
                 </button>
               </div>
             </div>
 
-            <textarea
-              value={articleContent}
-              onChange={e => setArticleContent(e.target.value)}
-              placeholder="点击左侧【立即开始生成文章】按钮，生成的内容将显示在此处，支持直接编辑与修改..."
-              className="flex-1 w-full p-4 bg-transparent text-slate-200 text-sm font-mono leading-relaxed resize-none focus:outline-none"
-            />
+            {/* 富文本容器卡片 */}
+            <div className="rounded-xl bg-slate-900/80 border border-slate-800 overflow-hidden shadow-xl flex flex-col flex-1 min-h-[560px]">
+              {/* 图1样式工具栏 */}
+              <div className="px-3 py-2 bg-slate-900 border-b border-slate-800 flex items-center flex-wrap gap-1 text-slate-400 text-xs select-none">
+                {/* Paragraph 级别选择器 */}
+                <div className="relative inline-flex items-center mr-1">
+                  <select
+                    value={selectedBlock}
+                    onChange={e => handleBlockChange(e.target.value)}
+                    className="appearance-none bg-slate-800 hover:bg-slate-750 text-slate-200 text-xs px-2.5 py-1.5 pr-6 rounded border border-slate-700 focus:outline-none cursor-pointer"
+                  >
+                    <option value="p">Paragraph</option>
+                    <option value="h1">Heading 1</option>
+                    <option value="h2">Heading 2</option>
+                    <option value="h3">Heading 3</option>
+                    <option value="blockquote">Quote</option>
+                    <option value="pre">Code Block</option>
+                  </select>
+                  <span className="absolute right-2 pointer-events-none text-[10px] text-slate-400">↕</span>
+                </div>
+
+                <div className="h-4 w-[1px] bg-slate-800 mx-1"></div>
+
+                {/* 格式按钮：B, I, S, <>, Tx */}
+                <button
+                  type="button"
+                  onClick={() => execCmd('bold')}
+                  title="Bold (加粗)"
+                  className="w-7 h-7 rounded hover:bg-slate-800 hover:text-slate-100 flex items-center justify-center font-bold text-xs transition"
+                >
+                  B
+                </button>
+                <button
+                  type="button"
+                  onClick={() => execCmd('italic')}
+                  title="Italic (斜体)"
+                  className="w-7 h-7 rounded hover:bg-slate-800 hover:text-slate-100 flex items-center justify-center italic text-xs transition"
+                >
+                  I
+                </button>
+                <button
+                  type="button"
+                  onClick={() => execCmd('strikeThrough')}
+                  title="Strikethrough (删除线)"
+                  className="w-7 h-7 rounded hover:bg-slate-800 hover:text-slate-100 flex items-center justify-center line-through text-xs transition"
+                >
+                  S
+                </button>
+                <button
+                  type="button"
+                  onClick={() => execCmd('formatBlock', '<code>')}
+                  title="Inline Code (行内代码)"
+                  className="w-7 h-7 rounded hover:bg-slate-800 hover:text-slate-100 flex items-center justify-center font-mono text-[11px] transition"
+                >
+                  &lt;&gt;
+                </button>
+                <button
+                  type="button"
+                  onClick={() => execCmd('removeFormat')}
+                  title="Clear formatting (清除格式)"
+                  className="w-7 h-7 rounded hover:bg-slate-800 hover:text-slate-100 flex items-center justify-center text-xs transition"
+                >
+                  T<sub className="text-[9px]">x</sub>
+                </button>
+
+                <div className="h-4 w-[1px] bg-slate-800 mx-1"></div>
+
+                {/* 列表按钮：Bullet, Numbered */}
+                <button
+                  type="button"
+                  onClick={() => execCmd('insertUnorderedList')}
+                  title="Bullet List (无序列表)"
+                  className="w-7 h-7 rounded hover:bg-slate-800 hover:text-slate-100 flex items-center justify-center text-xs transition"
+                >
+                  •≡
+                </button>
+                <button
+                  type="button"
+                  onClick={() => execCmd('insertOrderedList')}
+                  title="Numbered List (有序列表)"
+                  className="w-7 h-7 rounded hover:bg-slate-800 hover:text-slate-100 flex items-center justify-center text-xs transition"
+                >
+                  1.≡
+                </button>
+
+                <div className="h-4 w-[1px] bg-slate-800 mx-1"></div>
+
+                {/* 插入元素：Divider, Link, Quote, Code, Table, Image */}
+                <button
+                  type="button"
+                  onClick={() => execCmd('insertHorizontalRule')}
+                  title="Horizontal Rule (分割线)"
+                  className="w-7 h-7 rounded hover:bg-slate-800 hover:text-slate-100 flex items-center justify-center text-sm font-bold transition"
+                >
+                  —
+                </button>
+                <button
+                  type="button"
+                  onClick={insertLink}
+                  title="Insert Link (插入链接)"
+                  className="w-7 h-7 rounded hover:bg-slate-800 hover:text-slate-100 flex items-center justify-center text-xs transition"
+                >
+                  🔗
+                </button>
+                <button
+                  type="button"
+                  onClick={() => execCmd('formatBlock', '<blockquote>')}
+                  title="Blockquote (引用块)"
+                  className="w-7 h-7 rounded hover:bg-slate-800 hover:text-slate-100 flex items-center justify-center text-sm font-serif transition"
+                >
+                  ”
+                </button>
+                <button
+                  type="button"
+                  onClick={() => execCmd('formatBlock', '<pre>')}
+                  title="Code Block (代码块)"
+                  className="w-7 h-7 rounded hover:bg-slate-800 hover:text-slate-100 flex items-center justify-center font-mono text-[11px] transition"
+                >
+                  {`{}`}
+                </button>
+                <button
+                  type="button"
+                  onClick={insertTable}
+                  title="Insert Table (插入表格)"
+                  className="w-7 h-7 rounded hover:bg-slate-800 hover:text-slate-100 flex items-center justify-center text-xs transition"
+                >
+                  田
+                </button>
+                <button
+                  type="button"
+                  onClick={insertImage}
+                  title="Insert Image (插入图片)"
+                  className="w-7 h-7 rounded hover:bg-slate-800 hover:text-slate-100 flex items-center justify-center text-xs transition"
+                >
+                  🖼️
+                </button>
+              </div>
+
+              {/* 富文本可编辑正文区 */}
+              <div
+                ref={editorRef}
+                contentEditable
+                onInput={handleEditorInput}
+                data-placeholder='Start writing or press "/" for commands...'
+                className="flex-1 p-6 text-slate-100 text-sm leading-relaxed focus:outline-none overflow-y-auto prose prose-invert max-w-none empty:before:content-[attr(data-placeholder)] empty:before:text-slate-600 empty:before:pointer-events-none"
+                style={{
+                  minHeight: '480px',
+                }}
+              />
+            </div>
           </div>
         </div>
       </div>
