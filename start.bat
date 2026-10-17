@@ -6,7 +6,7 @@ echo ====================================================
 echo             Starting Nav-Blog Dev Server
 echo ====================================================
 echo Local URL: http://localhost:4321
-echo CMS Admin: http://localhost:4321/keystatic
+echo CMS Admin: http://localhost:4321/cms
 echo Stop:      Press Ctrl+C or close this window
 echo ====================================================
 echo.

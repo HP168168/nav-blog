@@ -24,6 +24,12 @@ replaceInFile(astroDistPath, [
   ['pattern: "/keystatic/[...params]"', 'pattern: "/cms/[...params]"'],
 ]);
 
+const astroApiDistPath = path.resolve('node_modules/@keystatic/astro/dist/keystatic-astro-api.js');
+replaceInFile(astroApiDistPath, [
+  ["import { getSecret } from 'astro:env/server';", "const getSecret = (key) => process.env[key];"],
+  ['import { getSecret } from "astro:env/server";', 'const getSecret = (key) => process.env[key];'],
+]);
+
 // 2. Patch @keystatic/core dist files
 const coreDistDir = path.resolve('node_modules/@keystatic/core/dist');
 if (fs.existsSync(coreDistDir)) {
