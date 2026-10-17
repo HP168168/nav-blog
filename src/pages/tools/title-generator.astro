@@ -1,0 +1,33 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TitleGenerator from '../../components/tools/TitleGenerator';
+---
+
+<Layout
+  title="黄页88风格 SEO标题批量生成器 · 矩阵营销工具"
+  description="基于核心词、修饰词、地域词与营销前后缀的批量长尾标题生成器，支持快速去重、字数限制与TXT/CSV导出"
+>
+  <div class="mb-8">
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-500/10 border border-violet-500/20 text-violet-400 text-xs font-medium mb-3">
+      <span>🏷️</span> 黄页88 矩阵标题生成器
+    </div>
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+      <div>
+        <h1 class="text-2xl sm:text-3xl font-extrabold text-white">
+          SEO 标题批量矩阵 <span class="bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">生成器</span>
+        </h1>
+        <p class="text-slate-400 text-xs sm:text-sm mt-1">
+          配置核心词、修饰词、地域库与营销前后缀，一键裂变数百条高质量长尾词标题，支持直送 AI 创作。
+        </p>
+      </div>
+      <a
+        href="/tools/ai-writer"
+        class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 hover:bg-emerald-500/20 text-xs font-medium transition self-start sm:self-auto"
+      >
+        <span>✍️</span> 切换到 AI 文章创作 ↗
+      </a>
+    </div>
+  </div>
+
+  <TitleGenerator client:load />
+</Layout>
