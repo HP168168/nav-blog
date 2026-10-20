@@ -1,0 +1,48 @@
+{
+  "name": "学习资源",
+  "icon": "📚",
+  "order": 9,
+  "links": [
+    {
+      "title": "浅水虾社群知识库",
+      "url": "https://my.feishu.cn/wiki/EPlHwX8U6iU0oUkj72Ac1h9Snwh",
+      "description": "浅水虾社群的 SEO 与独立开发知识库，实战经验汇总。",
+      "icon": "🦐",
+      "tag": "社群"
+    },
+    {
+      "title": "SEO 从1到100",
+      "url": "https://lownrain.feishu.cn/wiki/RY9EwA4XJixz1AkSRyycw6binMe",
+      "description": "系统化 SEO 知识库，从入门到进阶的完整学习路径。",
+      "icon": "📖",
+      "tag": "系统教程"
+    },
+    {
+      "title": "哥飞公众号",
+      "url": "https://mp.weixin.qq.com/s/V5fGdaJgy0sjws2HgdWKRQ",
+      "description": "哥飞的 SEO 与独立出海实战公众号，干货满满。",
+      "icon": "✍️"
+    },
+    {
+      "title": "哥飞 SEO 工具箱",
+      "url": "https://seo.web.cafe/",
+      "description": "哥飞整理的 SEO 工具箱，实用工具合集。",
+      "icon": "🧰",
+      "tag": "工具合集"
+    },
+    {
+      "title": "SEO 谷歌官方指南",
+      "url": "https://developers.google.com/search/docs?hl=zh-cn",
+      "description": "Google 官方 SEO 开发者文档，权威参考资料。",
+      "icon": "🌐",
+      "tag": "官方"
+    },
+    {
+      "title": "SaaS SEO Playbook",
+      "url": "https://github.com/JeffLi1993/saas-seo-playbook",
+      "description": "面向 AI 工具站、SaaS 官网和独立开发者的 SEO 实战小册子。",
+      "icon": "📗",
+      "tag": "开源"
+    }
+  ]
+}

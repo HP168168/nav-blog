@@ -4,7 +4,10 @@ import { getCollection } from 'astro:content';
 
 const rawCategories = await getCollection('navigation');
 const categories = rawCategories
-  .map(c => c.data)
+  .map(c => ({
+    ...c.data,
+    links: (c.data.links || []).filter(link => link.visible !== false)
+  }))
   .sort((a, b) => a.order - b.order);
 
 const totalSites = categories.reduce((sum, cat) => sum + (cat.links?.length || 0), 0);
@@ -21,7 +24,7 @@ const totalSites = categories.reduce((sum, cat) => sum + (cat.links?.length || 0
       极客与开发者的 <span class="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">数字导航站</span>
     </h1>
     <p class="max-w-2xl mx-auto text-slate-400 text-sm sm:text-base">
-      精选 AI 工具、开发框架与高效神器。支持在 <a href="/cms/" class="text-emerald-400 hover:underline">/cms 后台</a> 在线管理。
+      精选 AI 工具、开发框架与高效神器。
     </p>
 
     <!-- 实时搜索输入框 -->

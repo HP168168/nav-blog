@@ -1,0 +1,54 @@
+{
+  "name": "统计工具",
+  "icon": "📊",
+  "order": 7,
+  "links": [
+    {
+      "title": "Google Analytics",
+      "url": "https://analytics.google.com/",
+      "description": "Google 推出的一款免费网站流量与用户行为分析工具，行业标准。",
+      "icon": "📈",
+      "tag": "推荐"
+    },
+    {
+      "title": "Umami",
+      "url": "https://umami.is/",
+      "description": "隐私优先的一体化网站分析平台，开源可自托管。",
+      "icon": "🍜",
+      "tag": "开源"
+    },
+    {
+      "title": "Microsoft Clarity",
+      "url": "https://clarity.microsoft.com/",
+      "description": "微软出品的免费网站数据统计平台，支持热图与录屏回放。",
+      "icon": "🪟",
+      "tag": "免费"
+    },
+    {
+      "title": "Plausible",
+      "url": "https://plausible.io/",
+      "description": "极致轻量与隐私友好的 Google Analytics 替代品，GDPR 合规。",
+      "icon": "✅"
+    },
+    {
+      "title": "Shynet",
+      "url": "https://github.com/milesmcc/shynet",
+      "description": "现代化、注重隐私、无 Cookie 的开源网络分析工具，可自托管。",
+      "icon": "🔒",
+      "tag": "开源"
+    },
+    {
+      "title": "Fathom Analytics",
+      "url": "https://usefathom.com/",
+      "description": "隐私优先、极简好用的 Google Analytics 替代品。",
+      "icon": "🧭"
+    },
+    {
+      "title": "Ackee",
+      "url": "https://ackee.electerious.com/",
+      "description": "自托管、Node.js 驱动的开源隐私分析工具，简洁优雅。",
+      "icon": "🌰",
+      "tag": "开源"
+    }
+  ]
+}

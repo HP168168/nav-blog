@@ -1,0 +1,70 @@
+{
+  "name": "支付工具",
+  "icon": "💳",
+  "order": 5,
+  "links": [
+    {
+      "title": "Stripe",
+      "url": "https://dashboard.stripe.com/",
+      "description": "主流支付工具，个人持港卡、护照可开，全球覆盖率最广。",
+      "icon": "💳",
+      "tag": "推荐"
+    },
+    {
+      "title": "Creem",
+      "url": "https://www.creem.io/",
+      "description": "个人可注册，无需境外卡，需排队审核。",
+      "icon": "🧾"
+    },
+    {
+      "title": "Waffo",
+      "url": "https://waffo.com/zh",
+      "description": "新晋支付工具，个人可注册，对接友好，无需境外银行卡。",
+      "icon": "🆕"
+    },
+    {
+      "title": "Polar.sh",
+      "url": "https://polar.sh/",
+      "description": "个人开发者可使用，费率 5%，支持订阅与一次性收费。",
+      "icon": "❄️"
+    },
+    {
+      "title": "简板",
+      "url": "https://console.hzjianban.com/login?inviteCode=A56E3A7DE1F484",
+      "description": "适合国内站点，开通费/手续费较低。",
+      "icon": "🇨🇳"
+    },
+    {
+      "title": "Z-Pay",
+      "url": "https://7-pay.cn/",
+      "description": "适合国内站点微信/支付宝支付，可个人主体注册，有开通费用。",
+      "icon": "📱"
+    },
+    {
+      "title": "Dodo Payments",
+      "url": "https://dodopayments.com/",
+      "description": "全球支持通道，支持个人开发者注册，接入简单。",
+      "icon": "🦤"
+    },
+    {
+      "title": "The Cards",
+      "url": "https://thecards.us/",
+      "description": "美卡与海外公司办理服务。",
+      "icon": "🏦"
+    },
+    {
+      "title": "独立开发者收款指南",
+      "url": "https://x.com/bozhou_ai/status/2108470868678762867",
+      "description": "国内海外 11 种收款方式对比与怎么选，独立开发者出海收款参考。",
+      "icon": "📖",
+      "tag": "教程"
+    },
+    {
+      "title": "不出境开通 Stripe 教程",
+      "url": "https://www.ccgxk.com/875.html",
+      "description": "不用肉身去香港开通 Stripe 的详细教程。",
+      "icon": "✈️",
+      "tag": "教程"
+    }
+  ]
+}

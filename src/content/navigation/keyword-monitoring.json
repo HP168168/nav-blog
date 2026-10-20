@@ -1,0 +1,54 @@
+{
+  "name": "新词监控",
+  "icon": "📡",
+  "order": 8,
+  "links": [
+    {
+      "title": "Google Trends",
+      "url": "https://trends.google.com/trends/",
+      "description": "查看关键词热度趋势，发现上升中的热词与话题。",
+      "icon": "📈",
+      "tag": "必备"
+    },
+    {
+      "title": "TrendsBar",
+      "url": "https://chromewebstore.google.com/detail/djimlibchepimambphhbhhjegmanioch",
+      "description": "专为 Google Trends 提供帮助的浏览器插件，增强趋势分析体验。",
+      "icon": "🔌",
+      "tag": "插件"
+    },
+    {
+      "title": "EasyStarter Trends",
+      "url": "https://www.easystarter.dev/zh/trends",
+      "description": "聚合谷歌趋势数据，帮助发现新兴关键词机会。",
+      "icon": "🌱"
+    },
+    {
+      "title": "FindNews",
+      "url": "https://findnews.me/",
+      "description": "全球热词监控与新游戏雷达，第一时间发现新词机会。",
+      "icon": "🌍"
+    },
+    {
+      "title": "新词日报",
+      "url": "https://newword.linkpad.site/",
+      "description": "每日新词报告，精选每天出现的新词汇与搜索趋势。",
+      "icon": "📰",
+      "tag": "每日更新"
+    },
+    {
+      "title": "New Term Radar",
+      "url": "https://github.com/zhuyansen/new-term-radar",
+      "description": "开源新词雷达工具，自动监控新兴词汇。",
+      "icon": "📡",
+      "tag": "开源"
+    },
+    {
+      "title": "Media.io Sitemap",
+      "url": "https://www.media.io/sitemap.xml",
+      "description": "通过竞品 Sitemap 发现内页新词与内容机会。",
+      "icon": "🗺️",
+      "tag": "技巧"
+    }
+  ]
+}

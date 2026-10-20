@@ -1,0 +1,64 @@
+{
+  "name": "竞品榜单",
+  "icon": "🏆",
+  "order": 10,
+  "links": [
+    {
+      "title": "Build or Skip",
+      "url": "https://buildorskip.dev",
+      "description": "产品收入榜单，帮助独立开发者发现有盈利潜力的赛道。",
+      "icon": "💰",
+      "tag": "收入榜"
+    },
+    {
+      "title": "Columbus Tools",
+      "url": "https://columbus.tools/",
+      "description": "综合收入/外链/关键词榜单，竞品分析多维度工具。",
+      "icon": "🧭",
+      "tag": "综合榜"
+    },
+    {
+      "title": "AI 工具榜",
+      "url": "https://ppop123.github.io/ai-tools-radar/",
+      "description": "AI 工具热度雷达榜单，发现最受欢迎的 AI 产品。",
+      "icon": "🤖"
+    },
+    {
+      "title": "TrustMRR",
+      "url": "https://trustmrr.com/",
+      "description": "查看网站真实收入，独立开发者收入透明度平台。",
+      "icon": "💎"
+    },
+    {
+      "title": "Toolify.ai",
+      "url": "https://www.toolify.ai/zh/new",
+      "description": "AI 工具导航站，发现最新最热的 AI 工具。",
+      "icon": "🔧"
+    },
+    {
+      "title": "Diggr",
+      "url": "https://diggr.dev/",
+      "description": "APP 榜单，发现热门移动应用与市场机会。",
+      "icon": "📱"
+    },
+    {
+      "title": "SiteData 增长榜",
+      "url": "https://sitedata.dev/fastest-growing-websites",
+      "description": "SiteData 的增长最快网站榜单，发现上升趋势的网站。",
+      "icon": "📈",
+      "tag": "增长榜"
+    },
+    {
+      "title": "Risetive",
+      "url": "https://risetive.com/",
+      "description": "竞品发现平台，找到你的竞争对手与市场定位。",
+      "icon": "🔍"
+    },
+    {
+      "title": "Great Apps",
+      "url": "https://greatapps.fyi/",
+      "description": "优质 APP 榜单，发现值得学习的移动应用产品。",
+      "icon": "⭐"
+    }
+  ]
+}

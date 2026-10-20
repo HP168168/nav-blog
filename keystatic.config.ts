@@ -40,7 +40,7 @@ export default config({
 
     // 2. 网址导航模块
     categories: collection({
-      label: '网址导航分类',
+      label: '导航分类',
       slugField: 'name',
       path: 'src/content/navigation/*',
       format: 'json',
@@ -61,10 +61,15 @@ export default config({
             description: fields.text({ label: '站点简介' }),
             icon: fields.text({ label: '图标 (Emoji 或 图片URL)', defaultValue: '🌐' }),
             tag: fields.text({ label: '角标标签 (如 免费 / 推荐 / 官方)' }),
+            visible: fields.checkbox({
+              label: '前台显示',
+              description: '是否在前台导航页面展示此站点（默认勾选显示）',
+              defaultValue: true,
+            }),
           }),
           {
             label: '收录站点列表',
-            itemLabel: (props) => props.fields.title.value || '未命名站点',
+            itemLabel: (props) => `${props.fields.title.value || '未命名站点'}${props.fields.visible.value === false ? ' (已隐藏)' : ''}`,
           }
         ),
       },

@@ -24,6 +24,7 @@ const navigation = defineCollection({
         description: z.string().optional(),
         icon: z.string().optional(),
         tag: z.string().optional(),
+        visible: z.boolean().default(true),
       })
     ).default([]),
   }),

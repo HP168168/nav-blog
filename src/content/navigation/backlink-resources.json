@@ -1,0 +1,192 @@
+{
+  "name": "外链资源",
+  "icon": "🔗",
+  "order": 4,
+  "links": [
+    {
+      "title": "100+ DR 外链列表",
+      "url": "https://potent-measure-31f.notion.site/14368f418f50804ba419d3ce7a333fa8?v=14368f418f508191a695000c6fcd329a",
+      "description": "100+ DR 高权重外链资源汇总。",
+      "icon": "💯",
+      "tag": "高DR"
+    },
+    {
+      "title": "高质量免费外链列表",
+      "url": "https://my.feishu.cn/base/AMZhbySQmaaiutsgCC2c1l6Bn6c?table=tblPlNGeJILi9Ptu&view=vewip7YQhP",
+      "description": "高质量免费外链资源汇总列表。",
+      "icon": "📋"
+    },
+    {
+      "title": "Yangyi 大佬的白帽外链",
+      "url": "https://x.com/yangyi/status/2055581344605065461",
+      "description": "未验证是否都是免费的外链资源整理。",
+      "icon": "🐦"
+    },
+    {
+      "title": "外链资源 URL 表",
+      "url": "https://docs.google.com/spreadsheets/d/1HRmA66GsR8riwt3nQCuficS6-9e3EbI07ZGMzk9RTGQ/htmlview",
+      "description": "Google Sheets 整理的外链 URL 资源表。",
+      "icon": "📊"
+    },
+    {
+      "title": "Indie Page",
+      "url": "https://indiepa.ge/",
+      "description": "独立开发者展示页面，可获得 dofollow 外链。",
+      "icon": "👨‍💻"
+    },
+    {
+      "title": "Read.cv",
+      "url": "https://read.cv/",
+      "description": "简历展示平台，可放个人链接。",
+      "icon": "📄"
+    },
+    {
+      "title": "Peerlist",
+      "url": "https://peerlist.io/",
+      "description": "开发者与设计师社区，可创建个人主页获取外链。",
+      "icon": "🤝"
+    },
+    {
+      "title": "Fazier",
+      "url": "https://fazier.com/",
+      "description": "产品发布与展示平台，可获取外链曝光。",
+      "icon": "🚀"
+    },
+    {
+      "title": "Dev Hunt",
+      "url": "https://devhunt.org/",
+      "description": "开发者工具发布平台，类 Product Hunt。",
+      "icon": "🛠️"
+    },
+    {
+      "title": "Uneed",
+      "url": "https://www.uneed.best/",
+      "description": "产品推荐与发现平台。",
+      "icon": "⭐"
+    },
+    {
+      "title": "Microlaunch",
+      "url": "https://microlaunch.net/",
+      "description": "独立开发者微型产品发布平台。",
+      "icon": "🎯"
+    },
+    {
+      "title": "MCP.so",
+      "url": "https://mcp.so/",
+      "description": "MCP 工具目录，可提交 MCP 服务获取外链。",
+      "icon": "🔌",
+      "tag": "MCP"
+    },
+    {
+      "title": "Panda Directory",
+      "url": "https://panda.directory/",
+      "description": "设计师与开发者资源目录，可投递产品。",
+      "icon": "🐼"
+    },
+    {
+      "title": "Hixo.ai",
+      "url": "https://hixo.ai/",
+      "description": "AI 工具导航站，可提交 AI 产品。",
+      "icon": "🤖"
+    },
+    {
+      "title": "All Startups",
+      "url": "https://www.allstartups.info/",
+      "description": "创业公司目录站，提交获取外链。",
+      "icon": "💼"
+    },
+    {
+      "title": "Pitchwall",
+      "url": "https://pitchwall.co/",
+      "description": "产品展示墙，可发布产品获取外链。",
+      "icon": "📌"
+    },
+    {
+      "title": "Listingbott",
+      "url": "https://listingbott.com/",
+      "description": "自动化产品目录提交工具。",
+      "icon": "🤖"
+    },
+    {
+      "title": "Mentionmind",
+      "url": "https://mentionmind.com/",
+      "description": "付费外链平台，监控品牌提及并获取外链。",
+      "icon": "💬"
+    },
+    {
+      "title": "Collaborator",
+      "url": "https://collaborator.pro/",
+      "description": "付费外链平台。国际化内容营销平台，除外链采购外还提供文章撰写与多国语言市场的媒体发布服务。",
+      "icon": "💰",
+      "tag": "付费"
+    },
+    {
+      "title": "Linkhouse",
+      "url": "https://linkhouse.net",
+      "description": "付费外链平台。整合 SEO 工具的外链交易平台，支持赞助文章、链接插入等多种合作形式。",
+      "icon": "💰",
+      "tag": "付费"
+    },
+    {
+      "title": "Getfluence",
+      "url": "https://getfluence.com",
+      "description": "付费外链平台。偏向品牌内容营销的媒体合作平台，注重行业媒体曝光与赞助文章。",
+      "icon": "💰",
+      "tag": "付费"
+    },
+    {
+      "title": "iCopify",
+      "url": "https://icopify.co",
+      "description": "付费外链平台。以 Guest Post 和链接建设为核心的交易平台。",
+      "icon": "💰",
+      "tag": "付费"
+    },
+    {
+      "title": "PRNEWS.IO",
+      "url": "https://prnews.io",
+      "description": "付费外链平台。偏新闻稿发布与媒体内容分发的平台，适合 SaaS、AI 工具等产品作为媒体曝光渠道。",
+      "icon": "📰",
+      "tag": "付费"
+    },
+    {
+      "title": "Link Publishers",
+      "url": "https://linkpublishers.com",
+      "description": "付费外链平台。围绕广告主与网站主搭建的外链双边市场，支持购买客座文章。",
+      "icon": "💰",
+      "tag": "付费"
+    },
+    {
+      "title": "Accessily",
+      "url": "https://accessily.com",
+      "description": "付费外链平台。提供 Guest Post 交易的市场化平台，可按价位与网站类型寻找外链发布资源。",
+      "icon": "💰",
+      "tag": "付费"
+    },
+    {
+      "title": "Bazoom",
+      "url": "https://bazoom.com",
+      "description": "付费外链平台。面向链接建设与内容发布的服务平台，侧重外链采购与规模化执行。",
+      "icon": "💰",
+      "tag": "付费"
+    },
+    {
+      "title": "MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/",
+      "description": "官方 MCP 工具注册中心，提交即可获取外链。",
+      "icon": "📦",
+      "tag": "MCP"
+    },
+    {
+      "title": "uWarp 导航站",
+      "url": "https://www.uwarp.design/launch",
+      "description": "包含 79 个导航站的发布资源汇总。",
+      "icon": "🗺️"
+    },
+    {
+      "title": "Notion 公开文档",
+      "url": "https://app.notion.com/",
+      "description": "在 Notion 发表公开文档，可获取外链。",
+      "icon": "📝"
+    }
+  ]
+}

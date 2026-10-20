@@ -1,0 +1,100 @@
+{
+  "name": "SEO 工具",
+  "icon": "🔍",
+  "order": 3,
+  "links": [
+    {
+      "title": "Google Search Console",
+      "url": "https://search.google.com/search-console/",
+      "description": "谷歌搜索控制台，监控网站在 Google 搜索中的表现。",
+      "icon": "🔎",
+      "tag": "必备"
+    },
+    {
+      "title": "Bing Webmasters",
+      "url": "https://www.bing.com/webmasters/",
+      "description": "必应网站管理工具。",
+      "icon": "🅱️"
+    },
+    {
+      "title": "百度资源平台",
+      "url": "https://ziyuan.baidu.com/property/index",
+      "description": "百度资源平台，提交网站给百度收录。",
+      "icon": "🔵"
+    },
+    {
+      "title": "搜狗资源平台",
+      "url": "https://zhanzhang.sogou.com/",
+      "description": "搜狗资源平台，提交网站给搜狗收录。",
+      "icon": "🐕"
+    },
+    {
+      "title": "360站长平台",
+      "url": "https://zhanzhang.so.com/sitetool/site_manage",
+      "description": "360站长平台。",
+      "icon": "🔘"
+    },
+    {
+      "title": "SEMrush",
+      "url": "https://www.semrush.com/free-tools/",
+      "description": "免费外链检查工具，一站式 SEO 分析平台。",
+      "icon": "📊",
+      "tag": "免费工具"
+    },
+    {
+      "title": "Ahrefs",
+      "url": "https://ahrefs.com/",
+      "description": "一站式的搜索引擎优化工具集，外链分析行业标杆。",
+      "icon": "📈"
+    },
+    {
+      "title": "SimilarWeb",
+      "url": "https://www.similarweb.com/",
+      "description": "网站流量来源查询，竞品流量分析利器。",
+      "icon": "🌐"
+    },
+    {
+      "title": "AITDK",
+      "url": "https://aitdk.com/",
+      "description": "AITDK 是一个免费的 AI SEO 工具站。",
+      "icon": "🤖",
+      "tag": "免费"
+    },
+    {
+      "title": "BuiltWith",
+      "url": "https://pro.builtwith.com/",
+      "description": "网站架构技术分析工具，一键识别竞品技术栈。",
+      "icon": "🏗️"
+    },
+    {
+      "title": "SiteData",
+      "url": "https://sitedata.dev/",
+      "description": "网站流量与广告情报分析平台。",
+      "icon": "📉"
+    },
+    {
+      "title": "GEO SEO Claude",
+      "url": "https://github.com/zubair-trabzada/geo-seo-claude",
+      "description": "GEO 优化 Skill，利用 Claude 进行地理位置 SEO 优化。",
+      "icon": "📍"
+    },
+    {
+      "title": "OpenSEO",
+      "url": "https://app.openseo.so",
+      "description": "开源 SEO 平台 OpenSEO 的托管版工作台。",
+      "icon": "🔓"
+    },
+    {
+      "title": "GSC MCP",
+      "url": "https://github.com/david-wulf/gsc-mcp",
+      "description": "GSC MCP，通过 AI 工具连接 Google Search Console 的 MCP 插件。",
+      "icon": "🔌"
+    },
+    {
+      "title": "Moz Link Explorer",
+      "url": "https://moz.com/link-explorer",
+      "description": "外链权重查询，Moz 的外链分析工具。",
+      "icon": "🔗"
+    }
+  ]
+}
