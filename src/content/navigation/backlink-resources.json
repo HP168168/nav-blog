@@ -1,192 +1,280 @@
 {
   "name": "外链资源",
   "icon": "🔗",
-  "order": 4,
+  "order": 5,
   "links": [
     {
-      "title": "100+ DR 外链列表",
+      "title": "100+ DR",
       "url": "https://potent-measure-31f.notion.site/14368f418f50804ba419d3ce7a333fa8?v=14368f418f508191a695000c6fcd329a",
-      "description": "100+ DR 高权重外链资源汇总。",
-      "icon": "💯",
-      "tag": "高DR"
+      "description": "",
+      "icon": "1",
+      "tag": ""
     },
     {
-      "title": "高质量免费外链列表",
+      "title": "高权重外链列表",
       "url": "https://my.feishu.cn/base/AMZhbySQmaaiutsgCC2c1l6Bn6c?table=tblPlNGeJILi9Ptu&view=vewip7YQhP",
-      "description": "高质量免费外链资源汇总列表。",
-      "icon": "📋"
+      "description": "",
+      "icon": "高",
+      "tag": "推荐"
     },
     {
-      "title": "Yangyi 大佬的白帽外链",
+      "title": "yangyi大佬的必发外链",
       "url": "https://x.com/yangyi/status/2055581344605065461",
-      "description": "未验证是否都是免费的外链资源整理。",
-      "icon": "🐦"
+      "description": "未验证是否都是免费的",
+      "icon": "https://linkpad.site/api/favicon-img/782e636f6d.png",
+      "tag": "推荐"
     },
     {
-      "title": "外链资源 URL 表",
+      "title": "外链 url",
       "url": "https://docs.google.com/spreadsheets/d/1HRmA66GsR8riwt3nQCuficS6-9e3EbI07ZGMzk9RTGQ/htmlview",
-      "description": "Google Sheets 整理的外链 URL 资源表。",
-      "icon": "📊"
+      "description": "",
+      "icon": "https://linkpad.site/api/favicon-img/646f63732e676f6f676c652e636f6d.png",
+      "tag": "推荐"
     },
     {
-      "title": "Indie Page",
-      "url": "https://indiepa.ge/",
-      "description": "独立开发者展示页面，可获得 dofollow 外链。",
-      "icon": "👨‍💻"
+      "title": "100backlinks",
+      "url": "https://100backlinks.org/",
+      "description": "付费外链交易网站",
+      "icon": "https://linkpad.site/api/favicon-img/3130306261636b6c696e6b732e6f7267.png",
+      "tag": "推荐"
     },
     {
-      "title": "Read.cv",
-      "url": "https://read.cv/",
-      "description": "简历展示平台，可放个人链接。",
-      "icon": "📄"
+      "title": "bbs.ss",
+      "url": "https://bbs.ss/works",
+      "description": "作品广场可免费提交外链",
+      "icon": "https://linkpad.site/api/favicon-img/6262732e7373.png",
+      "tag": "推荐"
     },
     {
-      "title": "Peerlist",
-      "url": "https://peerlist.io/",
-      "description": "开发者与设计师社区，可创建个人主页获取外链。",
-      "icon": "🤝"
+      "title": "vibecafe",
+      "url": "https://vibecafe.ai/products/new",
+      "description": "可免费发布作品提交外链",
+      "icon": "https://linkpad.site/api/favicon-img/76696265636166652e6169.png",
+      "tag": "推荐"
     },
     {
-      "title": "Fazier",
-      "url": "https://fazier.com/",
-      "description": "产品发布与展示平台，可获取外链曝光。",
-      "icon": "🚀"
+      "title": "vibeloft.ai",
+      "url": "https://vibeloft.ai/boarding-pass",
+      "description": "免费提交外链",
+      "icon": "https://linkpad.site/api/favicon-img/766962656c6f66742e6169.png",
+      "tag": "推荐"
     },
     {
-      "title": "Dev Hunt",
-      "url": "https://devhunt.org/",
-      "description": "开发者工具发布平台，类 Product Hunt。",
-      "icon": "🛠️"
+      "title": "dev.to",
+      "url": "https://dev.to/",
+      "description": "适合发使用教程",
+      "icon": "https://linkpad.site/api/favicon-img/6465762e746f.png",
+      "tag": "推荐"
     },
     {
-      "title": "Uneed",
-      "url": "https://www.uneed.best/",
-      "description": "产品推荐与发现平台。",
-      "icon": "⭐"
+      "title": "aisotools",
+      "url": "https://aisotools.com/",
+      "description": "可自动化提交，无需审核直接上线",
+      "icon": "https://linkpad.site/api/favicon-img/6169736f746f6f6c732e636f6d.png",
+      "tag": "推荐"
     },
     {
-      "title": "Microlaunch",
-      "url": "https://microlaunch.net/",
-      "description": "独立开发者微型产品发布平台。",
-      "icon": "🎯"
+      "title": "ainavbar",
+      "url": "https://ainavbar.ai/",
+      "description": "可自动化提交，需要审核",
+      "icon": "https://linkpad.site/api/favicon-img/61696e61766261722e6169.png",
+      "tag": "推荐"
     },
     {
-      "title": "MCP.so",
-      "url": "https://mcp.so/",
-      "description": "MCP 工具目录，可提交 MCP 服务获取外链。",
-      "icon": "🔌",
-      "tag": "MCP"
+      "title": "AI library",
+      "url": "https://library.phygital.plus/",
+      "description": "可自动化提交，需要审核",
+      "icon": "https://linkpad.site/api/favicon-img/6c6962726172792e706879676974616c2e706c7573.png",
+      "tag": "推荐"
     },
     {
-      "title": "Panda Directory",
-      "url": "https://panda.directory/",
-      "description": "设计师与开发者资源目录，可投递产品。",
-      "icon": "🐼"
+      "title": "aitophub",
+      "url": "https://aitophub.com/",
+      "description": "可自动化提交，需要审核",
+      "icon": "https://linkpad.site/api/favicon-img/6169746f706875622e636f6d.png",
+      "tag": "推荐"
     },
     {
-      "title": "Hixo.ai",
-      "url": "https://hixo.ai/",
-      "description": "AI 工具导航站，可提交 AI 产品。",
-      "icon": "🤖"
+      "title": "ki-suche",
+      "url": "https://www.ki-suche.io/",
+      "description": "可自动化提交，需要审核",
+      "icon": "https://linkpad.site/api/favicon-img/6b692d73756368652e696f.png",
+      "tag": "推荐"
     },
     {
-      "title": "All Startups",
-      "url": "https://www.allstartups.info/",
-      "description": "创业公司目录站，提交获取外链。",
-      "icon": "💼"
+      "title": "verysaas",
+      "url": "https://www.verysaas.io/",
+      "description": "可自动化提交，需要审核",
+      "icon": "https://linkpad.site/api/favicon-img/76657279736161732e696f.png",
+      "tag": "推荐"
     },
     {
-      "title": "Pitchwall",
-      "url": "https://pitchwall.co/",
-      "description": "产品展示墙，可发布产品获取外链。",
-      "icon": "📌"
+      "title": "aig123",
+      "url": "https://ai123.cn/",
+      "description": "可自动化提交",
+      "icon": "https://linkpad.site/api/favicon-img/61693132332e636e.png",
+      "tag": "推荐"
     },
     {
-      "title": "Listingbott",
-      "url": "https://listingbott.com/",
-      "description": "自动化产品目录提交工具。",
-      "icon": "🤖"
+      "title": "ainavhub",
+      "url": "https://ainavhub.com/cn",
+      "description": "可自动化提交",
+      "icon": "https://linkpad.site/api/favicon-img/61696e61766875622e636f6d.png",
+      "tag": "推荐"
     },
     {
-      "title": "Mentionmind",
-      "url": "https://mentionmind.com/",
-      "description": "付费外链平台，监控品牌提及并获取外链。",
-      "icon": "💬"
+      "title": "aig123",
+      "url": "https://www.aig123.com/",
+      "description": "可自动化提交但是有验证码",
+      "icon": "https://linkpad.site/api/favicon-img/6169673132332e636f6d.png",
+      "tag": "推荐"
+    },
+    {
+      "title": "aiai.tools",
+      "url": "https://aiai.tools/",
+      "description": "容易提交",
+      "icon": "A",
+      "tag": "推荐"
+    },
+    {
+      "title": "freeai",
+      "url": "https://freeaio.com/",
+      "description": "可自动化提交",
+      "icon": "https://linkpad.site/api/favicon-img/6672656561696f2e636f6d.png",
+      "tag": "推荐"
+    },
+    {
+      "title": "findly",
+      "url": "https://findly.tools",
+      "description": "DR高，收录快，需要返链",
+      "icon": "https://linkpad.site/api/favicon-img/66696e646c792e746f6f6c73.png",
+      "tag": "推荐"
+    },
+    {
+      "title": "mkdollar",
+      "url": "https://mkdollar.com/backlinks",
+      "description": "185个免费外链。",
+      "icon": "https://linkpad.site/api/favicon-img/6d6b646f6c6c61722e636f6d.png",
+      "tag": "推荐"
+    },
+    {
+      "title": "directories.bestaitools",
+      "url": "https://directories.bestaitools.com/",
+      "description": "外链聚合。",
+      "icon": "https://linkpad.site/api/favicon-img/6469726563746f726965732e626573746169746f6f6c732e636f6d.png",
+      "tag": "推荐"
+    },
+    {
+      "title": "egolinks",
+      "url": "https://egolinks.online/@backlinks",
+      "description": "外链聚合网站。",
+      "icon": "E",
+      "tag": "推荐"
+    },
+    {
+      "title": "aimaker",
+      "url": "https://aimaker.dev/directory",
+      "description": "外链聚合网站。",
+      "icon": "https://linkpad.site/api/favicon-img/61696d616b65722e646576.png",
+      "tag": "推荐"
+    },
+    {
+      "title": "sopilot",
+      "url": "https://sopilot.net/zh/submitdir",
+      "description": "外链聚合网站。",
+      "icon": "https://linkpad.site/api/favicon-img/736f70696c6f742e6e6574.png",
+      "tag": "推荐"
+    },
+    {
+      "title": "Adsy",
+      "url": "https://adsy.com",
+      "description": "付费外链平台。外链双边交易市场，网站主提交网站定价出售发布位，买家按主题、流量和 SEO 指标筛选购买客座文章。",
+      "icon": "https://linkpad.site/api/favicon-img/616473792e636f6d.png",
+      "tag": "推荐"
     },
     {
       "title": "Collaborator",
-      "url": "https://collaborator.pro/",
+      "url": "https://collaborator.pro",
+      "description": "付费外链平台。成熟的内容营销与外链交易平台，支持批量筛选站点购买文章发布，适合 SEO 团队规模化采购外链。",
+      "icon": "https://linkpad.site/api/favicon-img/636f6c6c61626f7261746f722e70726f.png",
+      "tag": "推荐"
+    },
+    {
+      "title": "WhitePress",
+      "url": "https://www.whitepress.com",
       "description": "付费外链平台。国际化内容营销平台，除外链采购外还提供文章撰写与多国语言市场的媒体发布服务。",
-      "icon": "💰",
-      "tag": "付费"
+      "icon": "https://linkpad.site/api/favicon-img/776869746570726573732e636f6d.png",
+      "tag": "推荐"
     },
     {
       "title": "Linkhouse",
       "url": "https://linkhouse.net",
-      "description": "付费外链平台。整合 SEO 工具的外链交易平台，支持赞助文章、链接插入等多种合作形式。",
-      "icon": "💰",
-      "tag": "付费"
+      "description": "付费外链平台。整合 SEO 工具的外链交易平台，支持赞助文章、链接插入等多种合作形式，强调网站数据筛选与采购效率。",
+      "icon": "https://linkpad.site/api/favicon-img/6c696e6b686f7573652e6e6574.png",
+      "tag": "推荐"
     },
     {
       "title": "Getfluence",
       "url": "https://getfluence.com",
-      "description": "付费外链平台。偏向品牌内容营销的媒体合作平台，注重行业媒体曝光与赞助文章。",
-      "icon": "💰",
-      "tag": "付费"
+      "description": "付费外链平台。偏向品牌内容营销的媒体合作平台，注重行业媒体曝光与赞助文章，兼顾外链获取与品牌传播。",
+      "icon": "https://linkpad.site/api/favicon-img/676574666c75656e63652e636f6d.png",
+      "tag": "推荐"
     },
     {
       "title": "iCopify",
       "url": "https://icopify.co",
-      "description": "付费外链平台。以 Guest Post 和链接建设为核心的交易平台。",
-      "icon": "💰",
-      "tag": "付费"
+      "description": "付费外链平台。以 Guest Post 和链接建设为核心的交易平台，模式直接，适合了解中小型外链市场的供需关系。",
+      "icon": "https://linkpad.site/api/favicon-img/69636f706966792e636f.png",
+      "tag": "推荐"
     },
     {
       "title": "PRNEWS.IO",
       "url": "https://prnews.io",
-      "description": "付费外链平台。偏新闻稿发布与媒体内容分发的平台，适合 SaaS、AI 工具等产品作为媒体曝光渠道。",
-      "icon": "📰",
-      "tag": "付费"
+      "description": "付费外链平台。偏新闻稿发布与媒体内容分发的平台，适合 SaaS、AI 工具等产品作为媒体曝光渠道，但链接权重价值不保证。",
+      "icon": "https://linkpad.site/api/favicon-img/70726e6577732e696f.png",
+      "tag": "推荐"
     },
     {
       "title": "Link Publishers",
       "url": "https://linkpublishers.com",
-      "description": "付费外链平台。围绕广告主与网站主搭建的外链双边市场，支持购买客座文章。",
-      "icon": "💰",
-      "tag": "付费"
+      "description": "付费外链平台。围绕广告主与网站主搭建的外链双边市场，结构清晰，支持提交网站资源与购买客座文章。",
+      "icon": "https://linkpad.site/api/favicon-img/6c696e6b7075626c6973686572732e636f6d.png",
+      "tag": "推荐"
     },
     {
       "title": "Accessily",
       "url": "https://accessily.com",
-      "description": "付费外链平台。提供 Guest Post 交易的市场化平台，可按价位与网站类型寻找外链发布资源。",
-      "icon": "💰",
-      "tag": "付费"
+      "description": "付费外链平台。提供 Guest Post 交易的市场化平台，广告主可按价位与网站类型寻找合适的外链发布资源。",
+      "icon": "https://linkpad.site/api/favicon-img/616363657373696c792e636f6d.png",
+      "tag": "推荐"
     },
     {
       "title": "Bazoom",
       "url": "https://bazoom.com",
-      "description": "付费外链平台。面向链接建设与内容发布的服务平台，侧重外链采购与规模化执行。",
-      "icon": "💰",
-      "tag": "付费"
+      "description": "付费外链平台。面向链接建设与内容发布的服务平台，侧重外链采购、站点匹配与规模化执行。",
+      "icon": "https://linkpad.site/api/favicon-img/62617a6f6f6d2e636f6d.png",
+      "tag": "推荐"
     },
     {
-      "title": "MCP Registry",
+      "title": "registry",
       "url": "https://registry.modelcontextprotocol.io/",
-      "description": "官方 MCP 工具注册中心，提交即可获取外链。",
-      "icon": "📦",
-      "tag": "MCP"
+      "description": "做成MCP 进行提交",
+      "icon": "R",
+      "tag": "推荐"
     },
     {
-      "title": "uWarp 导航站",
+      "title": "uwarp",
       "url": "https://www.uwarp.design/launch",
-      "description": "包含 79 个导航站的发布资源汇总。",
-      "icon": "🗺️"
+      "description": "79个导航站",
+      "icon": "https://linkpad.site/api/favicon-img/75776172702e64657369676e@2.png",
+      "tag": "推荐"
     },
     {
-      "title": "Notion 公开文档",
+      "title": "notion",
       "url": "https://app.notion.com/",
-      "description": "在 Notion 发表公开文档，可获取外链。",
-      "icon": "📝"
+      "description": "在 Notion 发表公开文档",
+      "icon": "https://linkpad.site/api/favicon-img/6170702e6e6f74696f6e2e636f6d@2.png",
+      "tag": "推荐"
     }
   ]
 }

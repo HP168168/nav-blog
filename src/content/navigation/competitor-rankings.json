@@ -1,64 +1,70 @@
 {
   "name": "竞品榜单",
   "icon": "🏆",
-  "order": 10,
+  "order": 7,
   "links": [
     {
-      "title": "Build or Skip",
-      "url": "https://buildorskip.dev",
-      "description": "产品收入榜单，帮助独立开发者发现有盈利潜力的赛道。",
-      "icon": "💰",
-      "tag": "收入榜"
+      "title": "buildorskip",
+      "url": "buildorskip.dev",
+      "description": "收入榜单",
+      "icon": "B",
+      "tag": "推荐"
     },
     {
-      "title": "Columbus Tools",
+      "title": "columbus",
       "url": "https://columbus.tools/",
-      "description": "综合收入/外链/关键词榜单，竞品分析多维度工具。",
-      "icon": "🧭",
-      "tag": "综合榜"
+      "description": "收入/外链/关键词榜单",
+      "icon": "https://linkpad.site/api/favicon-img/636f6c756d6275732e746f6f6c73.png",
+      "tag": "推荐"
     },
     {
       "title": "AI 工具榜",
       "url": "https://ppop123.github.io/ai-tools-radar/",
-      "description": "AI 工具热度雷达榜单，发现最受欢迎的 AI 产品。",
-      "icon": "🤖"
+      "description": "",
+      "icon": "https://linkpad.site/api/favicon-img/65617379737461727465722e646576.png",
+      "tag": "推荐"
     },
     {
-      "title": "TrustMRR",
+      "title": "trustmrr",
       "url": "https://trustmrr.com/",
-      "description": "查看网站真实收入，独立开发者收入透明度平台。",
-      "icon": "💎"
+      "description": "查看网站真实收入",
+      "icon": "https://linkpad.site/api/favicon-img/74727573746d72722e636f6d.png",
+      "tag": "推荐"
     },
     {
-      "title": "Toolify.ai",
+      "title": "toolify.ai",
       "url": "https://www.toolify.ai/zh/new",
-      "description": "AI 工具导航站，发现最新最热的 AI 工具。",
-      "icon": "🔧"
+      "description": "Ai 工具导航站",
+      "icon": "https://linkpad.site/api/favicon-img/746f6f6c6966792e6169.png",
+      "tag": "推荐"
     },
     {
-      "title": "Diggr",
+      "title": "diggr",
       "url": "https://diggr.dev/",
-      "description": "APP 榜单，发现热门移动应用与市场机会。",
-      "icon": "📱"
+      "description": "APP 榜单",
+      "icon": "D",
+      "tag": "推荐"
     },
     {
-      "title": "SiteData 增长榜",
+      "title": "sitedata",
       "url": "https://sitedata.dev/fastest-growing-websites",
-      "description": "SiteData 的增长最快网站榜单，发现上升趋势的网站。",
-      "icon": "📈",
-      "tag": "增长榜"
+      "description": "SiteData 的增长最快网站榜单",
+      "icon": "https://linkpad.site/api/favicon-img/73697465646174612e646576.png",
+      "tag": "推荐"
     },
     {
-      "title": "Risetive",
+      "title": "risetive",
       "url": "https://risetive.com/",
-      "description": "竞品发现平台，找到你的竞争对手与市场定位。",
-      "icon": "🔍"
+      "description": "找竞品",
+      "icon": "https://linkpad.site/api/favicon-img/72697365746976652e636f6d.png",
+      "tag": "推荐"
     },
     {
-      "title": "Great Apps",
+      "title": "greatapps",
       "url": "https://greatapps.fyi/",
-      "description": "优质 APP 榜单，发现值得学习的移动应用产品。",
-      "icon": "⭐"
+      "description": "APP 榜单",
+      "icon": "https://linkpad.site/api/favicon-img/6772656174617070732e667969.png",
+      "tag": "推荐"
     }
   ]
 }

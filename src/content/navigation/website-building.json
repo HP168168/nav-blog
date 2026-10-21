@@ -4,114 +4,123 @@
   "order": 6,
   "links": [
     {
-      "title": "Query Domains",
+      "title": "query",
       "url": "https://query.domains/zh-hans",
-      "description": "域名批量查询工具，一次查询多个域名。",
-      "icon": "🔍"
+      "description": "域名批量查询",
+      "icon": "https://linkpad.site/api/favicon-img/71756572792e646f6d61696e73@2.png",
+      "tag": ""
     },
     {
-      "title": "Instant Domain Search",
+      "title": "instantdomainsearch",
       "url": "https://instantdomainsearch.com/",
-      "description": "域名注册情况实时查询一览表。",
-      "icon": "⚡",
-      "tag": "快速"
+      "description": "域名注册情况查询一览表",
+      "icon": "https://linkpad.site/api/favicon-img/696e7374616e74646f6d61696e7365617263682e636f6d.png",
+      "tag": "推荐"
     },
     {
-      "title": "Namecheap",
+      "title": "namecheap",
       "url": "https://www.namecheap.com/",
-      "description": "便宜域名购买平台，价格实惠、管理简便。",
-      "icon": "🏷️"
+      "description": "便宜域名购买",
+      "icon": "https://linkpad.site/api/favicon-img/6e616d6563686561702e636f6d.png",
+      "tag": "推荐"
     },
     {
-      "title": "Spaceship",
+      "title": "spaceship",
       "url": "https://www.spaceship.com/",
-      "description": "域名购买平台，界面简洁，价格竞争力强。",
-      "icon": "🚀"
+      "description": "域名购买",
+      "icon": "https://linkpad.site/api/favicon-img/7370616365736869702e636f6d.png",
+      "tag": "推荐"
     },
     {
-      "title": "Cloudflare",
+      "title": "cloudflare",
       "url": "https://dash.cloudflare.com/",
-      "description": "赛博活佛！服务器、数据库、存储一站搞定，CDN、Pages 免费托管。",
-      "icon": "☁️",
-      "tag": "必备"
+      "description": "赛博活佛！服务器、数据库、存储一站搞定",
+      "icon": "https://linkpad.site/api/favicon-img/646173682e636c6f7564666c6172652e636f6d.png",
+      "tag": "推荐"
     },
     {
-      "title": "Neon",
+      "title": "neon",
       "url": "https://neon.com/",
-      "description": "Serverless PostgreSQL 数据库，开发体验极佳，有免费套餐。",
-      "icon": "🗄️"
+      "description": "数据库",
+      "icon": "https://linkpad.site/api/favicon-img/6e656f6e2e636f6d.png",
+      "tag": "推荐"
     },
     {
-      "title": "Supabase",
+      "title": "supabase",
       "url": "https://supabase.com/",
-      "description": "开源 Firebase 替代品，提供数据库、认证、存储等后端服务。",
-      "icon": "⚡"
+      "description": "后端/数据库",
+      "icon": "https://linkpad.site/api/favicon-img/73757061626173652e636f6d.png",
+      "tag": "推荐"
     },
     {
-      "title": "Vercel",
+      "title": "vercel",
       "url": "https://vercel.com/",
-      "description": "全球顶尖前端与 Serverless 部署托管平台，一键部署。",
-      "icon": "▲"
+      "description": "前端部署工具",
+      "icon": "https://linkpad.site/api/favicon-img/76657263656c2e636f6d.png",
+      "tag": "推荐"
     },
     {
-      "title": "MkSaaS",
+      "title": "mksaas",
       "url": "https://mksaas.com/",
-      "description": "快速建站模板（付费），包含支付、认证等完整功能。",
-      "icon": "💰",
-      "tag": "付费模板"
+      "description": "快速建站模板（付费）",
+      "icon": "https://linkpad.site/api/favicon-img/6d6b736161732e636f6d.png",
+      "tag": "推荐"
     },
     {
-      "title": "ShipAny",
+      "title": "shipany",
       "url": "https://shipany.ai/zh",
-      "description": "快速建站模板（付费），专为 AI 产品设计的 SaaS 启动套件。",
-      "icon": "🤖",
-      "tag": "付费模板"
+      "description": "快速建站模板（付费）",
+      "icon": "https://linkpad.site/api/favicon-img/73686970616e792e6169.png",
+      "tag": "推荐"
     },
     {
-      "title": "TanStarter",
+      "title": "tanstarter",
       "url": "https://tanstarter.dev/",
-      "description": "付费快速建站模板，基于 TanStack 生态构建。",
-      "icon": "🏎️",
-      "tag": "付费模板"
+      "description": "付费快速建站模板",
+      "icon": "https://linkpad.site/api/favicon-img/74616e737461727465722e646576.png",
+      "tag": "推荐"
     },
     {
-      "title": "OpenStarter",
+      "title": "openstarter",
       "url": "https://github.com/openstarter-dev/openstarter",
-      "description": "开源建站模板，免费可用，适合快速启动 SaaS 项目。",
-      "icon": "📦",
-      "tag": "开源"
+      "description": "开源建站模板",
+      "icon": "https://linkpad.site/api/favicon-img/6769746875622e636f6d.png",
+      "tag": "推荐"
     },
     {
-      "title": "谷歌广告申请自检",
+      "title": "谷歌广告申请自检SKILL",
       "url": "https://new.web.cafe/topic/bej425wdjc?silentLoginOpenid=oZfM2xJ3liNmWAcQTjjUNTbbHplc",
-      "description": "谷歌广告申请自检 Skill，提高申请通过率。",
-      "icon": "✅",
-      "tag": "教程"
+      "description": "谷歌广告申请自检SKILL",
+      "icon": "https://linkpad.site/api/favicon-img/6e65772e7765622e63616665.png",
+      "tag": "推荐"
     },
     {
       "title": "免费域名",
       "url": "https://my.dnshe.com/go.php?code=29SCysRl2S",
-      "description": "赠送 3 个免费域名额度，适合新手测试项目。",
-      "icon": "🎁",
-      "tag": "免费"
+      "description": "赠送3个免费域名额度",
+      "icon": "https://linkpad.site/api/favicon-img/6d792e646e7368652e636f6d.png",
+      "tag": "推荐"
     },
     {
-      "title": "AI Website Cloner",
+      "title": "ai-website-cloner-template",
       "url": "https://github.com/JCodesMore/ai-website-cloner-template",
-      "description": "AI 驱动的网站 UI 复刻工具模板。",
-      "icon": "🤖"
+      "description": "复刻网站UI",
+      "icon": "https://linkpad.site/api/favicon-img/6769746875622e636f6d.png",
+      "tag": "推荐"
     },
     {
-      "title": "CrUX Vis",
+      "title": "cruxvis",
       "url": "https://cruxvis.withgoogle.com/#/",
-      "description": "Google CrUX 网站真实用户体验数据可视化工具。",
-      "icon": "📊"
+      "description": "网站真实用户体验可视化工具",
+      "icon": "https://linkpad.site/api/favicon-img/637275787669732e77697468676f6f676c652e636f6d.png",
+      "tag": "推荐"
     },
     {
-      "title": "Wappalyzer",
+      "title": "wappalyzer",
       "url": "https://www.wappalyzer.com/",
-      "description": "识别网站技术栈的工具，一键分析竞品用了哪些技术。",
-      "icon": "🔬"
+      "description": "识别网站技术栈",
+      "icon": "https://linkpad.site/api/favicon-img/77617070616c797a65722e636f6d@2.png",
+      "tag": "推荐"
     }
   ]
 }
